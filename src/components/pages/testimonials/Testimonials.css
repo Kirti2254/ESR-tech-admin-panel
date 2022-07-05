@@ -1,0 +1,164 @@
+.testimonial {
+    flex: 4;
+    padding: 20px;
+}
+
+.testimonialTitleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.testimonialAddButton {
+    width: 80px;
+    border: none;
+    padding: 5px;
+    background-color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+
+}
+
+.testimonialContainer {
+    display: flex;
+    margin-top: 20px;
+}
+
+.testimonialShow {
+    flex: 1;
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+}
+
+.testimonialUpdate {
+    flex: 2;
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    margin-left: 20px;
+}
+
+.testimonialShowTop {
+    display: flex;
+    align-items: center;
+}
+
+.testimonialShowImg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonialShowTopTitle {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.testiimonialShowUsername {
+    font-weight: 600;
+}
+
+.testimonialShowUserTitle {
+    font-weight: 300;
+}
+
+.testimonialShowButton {
+    margin-top: 20px;
+}
+
+.testimonialShowTitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(175, 170, 170);
+}
+
+.testimonialShowInfo {
+    display: flex;
+    align-items: center;
+    margin: 20px 0px;
+    color: #444;
+}
+
+.testimonialShowIcon {
+    font-size: 16px !important;
+}
+
+.testimonialShowInfoTitle {
+    margin-left: 10px;
+
+}
+
+.testimonialUpdateTitle {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+
+.testimonialUpdateForm {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.testimonialUpdateItem {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.testimonialUpdateItem>label {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.testimonialUpdateInput {
+    border: none;
+    width: 250px;
+    border-bottom: 1px solid gray;
+    height: 30px;
+}
+
+.testimonialUpdateRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.testimonialUpdateUpload {
+    display: flex;
+    align-items: center;
+}
+
+
+.testimonialUpdateImg {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-left: 20px;
+}
+
+.testimonialUpdateIcon {
+    cursor: pointer;
+}
+
+.testimonialUpdateButton {
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    background-color: rgb(10, 10, 105);
+    color: white;
+    font-weight: bold;
+
+}
+
+.testimonialThumbnailUpload {
+    display: flex;
+    flex-direction: row;
+}
