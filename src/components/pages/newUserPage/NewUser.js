@@ -26,22 +26,25 @@ const NewUser = () => {
           <label>Password</label>
           <input type="password" placeholder="password" />
         </div>
-        <div className="newUserItem">
+         <div className="newUserItem">
           <label>Admin</label>
-          <div className="newUserGender">
-            <input type="radio" name="admin" id="Yes" value="yes" />
-            <label for="yes">Yes</label>
-            <input type="radio" name="admin" id="No" value="no" />
-            <label for="admin">No</label>
-          </div>
-        </div>
-        <div className="newUserItem">
-          <label>Active</label>
-          <select className="newUserSelect" name="active" id="active">
+          <select className="newUserSelect" name="admin" id="admin">
             <option value="yes">Yes</option>
             <option value="no">No</option>
           </select>
         </div>
+
+        <div className="newUserItem">
+          <label> Confirm Password</label>
+          <input type="confirm password" placeholder="confirm password"
+             
+           />
+        </div>
+
+
+
+        
+      
         <button className="newUserButton">Create</button>
       </form>
     

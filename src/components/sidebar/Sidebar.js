@@ -62,11 +62,12 @@ const Sidebar = () => {
          <div className='sidebarMenu'>
             <h3 className='sidebarTitle'>Testimonial</h3>
             <ul className='sidebarList'>
-               
+               <Link to = '/testimonials' className='link'>
                 <li className='sidebarListItem'>
                  <Book className='sidebarIcon'/>
                  Testimonial
                 </li>
+                </Link>
             </ul>
         </div>
      </div>
