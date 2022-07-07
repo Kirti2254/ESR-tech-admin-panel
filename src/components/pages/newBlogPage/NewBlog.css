@@ -45,13 +45,31 @@
 }
 
 .newBlogButton {
-    width: 200px;
-    border: none;
+    width: 100px;
+    /* border: none;
     background-color: darkblue;
     color: white;
     padding: 7px 10px;
     font-weight: 600;
     border-radius: 10px;
     margin-top: 30px;
-    cursor: pointer;
+    cursor: pointer;  */
+    margin-top: 30px;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        background-color: darkblue;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+}
+
+.newBlogPhoto>label{
+    color: gray;
+        font-weight: 600;
+        margin-top: 10px;
+}
+
+.newBlogPhoto>input {
+    padding: 10px;
 }
