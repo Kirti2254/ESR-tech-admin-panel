@@ -13,7 +13,7 @@ const BlogList = () => {
     const columns = [
         
  { field: 'id', headerName: 'ID', width: 100 },
-  { field: 'blogtitle', headerName: 'BlogTitle', width: 600, renderCell:(params)=> {
+  { field: 'blogtitle', headerName: 'BlogTitle', width: 300, renderCell:(params)=> {
     return(
         <div className='blogListUser'>
             <img className='blogListImg' src={params.row.img} alt =""/>
@@ -22,17 +22,9 @@ const BlogList = () => {
     );
   },
 },
-//   {
-//     field: 'createDate',
-//     headerName: 'createDate',
-//     width: 150,
-//   },
 
-//    {
-//     field: 'uploadDate',
-//     headerName: 'uploadDate',
-//     width: 150,
-//   },
+{field : 'comment', headerName:'Comment', width: 500},
+{field : 'reply', headerName:'Reply', width: 500},
   {
     field: "action",
     headerName:"Action",
@@ -51,8 +43,6 @@ const BlogList = () => {
   }
  
 ];
-
-
   return (
     <div className='blogList'>
         <DataGrid

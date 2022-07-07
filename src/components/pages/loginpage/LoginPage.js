@@ -2,27 +2,29 @@ import { useState } from "react";
 import "./LoginPage.css";
 import FormInput from "../loginpage/FormInput";
 import { useNavigate } from "react-router";
+import { useDispatch } from "react-redux"
+import { authApi } from "./reducers/authApi";
 
 const LoginPage = () => {
+  //const [data,saveData] = useState(false);
   const navigate = useNavigate();
   const [values, setValues] = useState({
-    username: "",
-    email: "",
-    birthday: "",
+    emailOrUsername: "",
     password: "",
-    confirmPassword: "",
   });
+
+  const [loginUser] = authApi.useLoginUserMutation();
 
   const inputs = [
     {
       id: 1,
-      name: "username/email",
+      name: "emailOrUsername",
       type: "text",
       placeholder: "Username/Email",
       errorMessage:
-        "Username should be 3-16 characters and shouldn't include any special character! It should be a valid email address!",
+        // "Username should be 3-16 characters and shouldn't include any special character! It should be a valid email address!",
+        "Username should be provided! There should be a valid email address!",
       label: "Username or Email",
-      pattern: "^[A-Za-z0-9]{3,16}$",
       required: true,
     },
     // {
@@ -33,14 +35,16 @@ const LoginPage = () => {
     //   label: "Birthday",
     // },
     {
-      id: 4,
+      id: 2,
       name: "password",
+
       type: "password",
       placeholder: "Password",
       errorMessage:
-        "Password should be 8-20 characters and include at least 1 letter, 1 number and 1 special character!",
+        // "Password should be 8-20 characters and include at least 1 letter, 1 number and 1 special character!",
+        "Password should be provided!",
       label: "Password",
-      pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$`,
+      // pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$`,
       required: true,
     },
     // {
@@ -55,22 +59,40 @@ const LoginPage = () => {
     // },
   ];
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
+  // const handleSubmit = (e) => {
+  //   console.log(e);
+  //   e.preventDefault();
+  // };
 
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
-  const onClickHandler = () => {
-    navigate("/users")
+  const onClickHandler = async (e) => {
+    e.preventDefault();
+    let data = {
+      ...values
+    }
+    console.log(data)
+    let userData = await loginUser(data);
+    if(userData?.data?.accessToken) {
+      navigate("/users")
+    }
   }
 
   return (
     <div className="app">
-      <form className="form" onSubmit={handleSubmit}>
-        <h1 className="login">Log In</h1>
+      
+      <div className='Logo'>
+      {/* <img src={process.env.PUBLIC_URL + '/Logo.png'} />; */}
+            <span className='logo'>ESR Tech</span>
+            
+            </div>
+            <div className="Login">
+             <h1 className="login">Log In</h1>
+        </div>
+        <div className="form">
+       <form>
         {inputs.map((input) => (
           <FormInput
             key={input.id}
@@ -79,8 +101,16 @@ const LoginPage = () => {
             onChange={onChange}
           />
         ))}
-        <button onClick={onClickHandler} className="buttonLogin">Submit</button>
+        <div className="button_container">
+<button className="buttonLogin" onClick={onClickHandler}>Submit</button>
+        </div>
+        
+ 
       </form>
+
+      </div>
+      
+    
     </div>
   );
 };

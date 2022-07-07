@@ -1,38 +1,51 @@
-.LoginPage {
-    /* flex: 4; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background: linear-gradient(rgba(255, 255, 255, 0.7),
-            rgba(255, 255, 255, 0.3)),
-        url("https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
-    background-size: cover;
-    background-position: center;
-}
-
-.form {
-    background-color: white;
-    padding: 0px 60px;
-    border-radius: 10px;
-}
-
-.login {
-    color: darkblue;
-    text-align: center;
-}
-
-.buttonLogin {
+.Logo {
     width: 100%;
     height: 50px;
-    padding: 10px;
-    border: none;
-    background-color: darkblue;
-    color: white;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 18px;
-    cursor: pointer;
+    background-color: white;
+    /* position: sticky; */
+    /* top: 0; */
+    /* z-index: 999; */
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    
+}
+
+.Login {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    /* position: sticky; */
+    /* top: 0; */
+    /* z-index: 999; */
+    display: flex;
+    justify-content: center;
     margin-top: 10px;
-    margin-bottom: 30px;
+}
+
+
+.form{
+    display: flex;
+    justify-content: center;
+
+}
+
+.buttonLogin{ 
+    /* display: flex; */
+    /* justify-content: center; */
+        height: 50px;
+        padding: 10px;
+        border: none;
+        background-color: darkblue;
+        color: white;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 15px;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-bottom: 30px;
+}
+.button_container{
+   display: flex;
+   justify-content: center;
 }

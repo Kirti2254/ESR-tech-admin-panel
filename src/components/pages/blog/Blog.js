@@ -70,6 +70,27 @@ const Blog = () => {
         </div>
 
 
+               <div className='blogUpdateItem'>
+                            <label>Comment</label>
+                                <TextareaAutosize
+                        maxRows={4}
+                  aria-label="maximum height"
+                    placeholder="Comment"
+                    style={{ width: 600}}
+                         />
+                          </div>
+
+                           <div className='blogUpdateItem'>
+                            <label>Reply</label>
+                                <TextareaAutosize
+                        maxRows={4}
+                  aria-label="maximum height"
+                    placeholder="Reply"
+                    style={{ width: 600}}
+                         />
+                          </div>
+
+
                    <div className="blogUpdateItem">
           <label>Thumbnail:</label>
           <div className='blogThumbnailUpload'>
